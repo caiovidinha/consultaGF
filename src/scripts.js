@@ -3,6 +3,22 @@ let SHEET_TITLE = 'codes'
 let SHEET_RANGE = 'A:D'
 let FULL_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE
 
+
+//COMPARAR DATAS:
+// a = new Date()
+
+// b = "12/12/2013"
+// var dateParts = b.split("/");
+// var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+
+// dateA = new Date(a)
+// dateB = new Date(dateObject)
+
+// console.log(dateA)
+// console.log(dateB)
+// console.log(dateA > dateB)
+
+
 const inputGen = document.getElementById("codigo")
 const buttonGen = document.getElementById("gen")
 const inputID = document.getElementById("identificacao")
@@ -41,7 +57,6 @@ async function getInfo() {
     for (let i = 0; i < data.table.rows.length; i++) {
         if(inputID.value==data.table.rows[i].c[0].v) existe=true
     }
-    console.log(existe)
 }
 
 function resetCode(code) {
